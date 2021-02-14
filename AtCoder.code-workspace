@@ -1,46 +1,47 @@
 {
 	"folders": [
 		{
-			"path": "ABC_easy_100"
-		},
-		{
-			"path": "ABC_contest"
-		},
-		{
-			"path": "ABC_virtual"
-		},
-		{
-			"path": "ABC_medium_contest"
-		},
-		{
-			"path": "ABC_algorithms"
+			"path": "."
 		},
 		{
 			"path": ".vscode"
 		},
 		{
-			"path": "AGC_contest"
+			"path": "ABC_algorithms"
 		},
 		{
-			"path": "other_contest"
+			"path": "ABC_contest"
+		},
+		{
+			"path": "ABC_easy_100"
+		},
+		{
+			"path": "ABC_hard_100"
+		},
+		{
+			"path": "ABC_medium_contest"
 		},
 		{
 			"path": "ABC_practice"
 		},
 		{
-			"path": "ABC_hard_100"
+			"path": "ABC_virtual"
+		},
+		{
+			"path": "AGC_contest"
 		},
 		{
 			"path": "ARC_contest"
 		},
 		{
 			"path": "arihon(kiso)"
+		},
+		{
+			"path": "other_contest"
+		},
+		{
+			"path": "ARC_practice"
 		}
 	],
-	"settings": {
-		"files.associations": {
-			"iostream": "cpp",
-			"ostream": "cpp"
-		}
-	}
+	"settings": {}
 }

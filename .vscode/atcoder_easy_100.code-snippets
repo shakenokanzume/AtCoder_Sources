@@ -19,16 +19,7 @@
 	"Print to console":{
 		"prefix": "temp",
 		"body": [
-			"#include <iostream>",
 			"#include <bits/stdc++.h>",
-			"#include <string>",
-			"#include <math.h>",
-			"#include <algorithm>",
-			"#include <vector>",
-			"#include <set>",
-			"#include <map>",
-			"#include <queue>",
-			"#include <stack>",
 			"using namespace std;",
 			"",
 			"typedef long long ll;",

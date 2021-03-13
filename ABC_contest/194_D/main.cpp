@@ -5,17 +5,12 @@ typedef long long ll;
 #define rep(i, n) for(int i = 0; i < n; i++)
 
 int main(){
-    ll N;
+    int N;
     cin >> N;
 
-    double ans = 1;
-    double val = 1000000000;
-
-    for(int i = 1; i <= N; i++){
-        ans *= val;
-        ans *= N;
-        ans /= i;
-        ans /= val;
+    double ans = 0;
+    for(int i = 1; i < N; i++){
+        ans += (double)N / (N-i);
     }
     printf("%.10lf\n", ans);
     return 0;

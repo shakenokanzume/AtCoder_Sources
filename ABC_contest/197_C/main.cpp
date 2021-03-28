@@ -7,5 +7,10 @@ typedef long long ll;
 const int lim = 1000000007;
 
 int main(){
+    int N;
+    cin >> N;
+    vector<ll> a(N);
+    rep(i, N) cin >> a[i];
+
     
 }

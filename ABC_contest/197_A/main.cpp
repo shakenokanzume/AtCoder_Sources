@@ -7,5 +7,9 @@ typedef long long ll;
 const int lim = 1000000007;
 
 int main(){
-    
+    string s;
+    cin >> s;
+
+    cout << s[1] << s[2] << s[0] << endl;
+    return 0;
 }

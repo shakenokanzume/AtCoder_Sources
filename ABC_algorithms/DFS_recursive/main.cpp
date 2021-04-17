@@ -15,12 +15,15 @@ using Graph = vector<vector<int>>;
 vector<bool> seen; //その頂点を探索済みかどうかを格納する
 
 //dfs実装部分
-void dfs(const Graph & G, int v){
+// 第3引数はデフォルト引数
+// デフォルト引数で、その頂点の前の頂点（以下、親とよぶ）から来たことを示すことで、木の逆流を防ぐ
+void dfs(const Graph &G, int v, int p = -1){
     seen[v] = true; //seenをtrueにするのは、その頂点が探索の始点となった時
 
     for(int nv : G[v]){
+        if(nv == p) continue;
         if(seen[nv] == true) continue;
-        dfs(G, nv);
+        dfs(G, nv, v);
     }
 }
 //dfs実装部分終わり

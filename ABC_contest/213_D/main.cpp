@@ -20,11 +20,11 @@ vector<int> path; // たどった経路を格納
 // デフォルト引数で、その頂点の前の頂点（以下、親とよぶ）から来たことを示すことで、木の逆流を防ぐ
 void dfs(const Graph &G, int v, int p = -1){
     seen[v] = true; //seenをtrueにするのは、その頂点が探索の始点となった時
+    path.push_back(v+1);
     
     for(int nv : G[v]){
         if(nv == p) continue;
         if(seen[nv] == true) continue;
-        path.push_back(nv+1);
         dfs(G, nv, v);
         path.push_back(v+1);
     }
@@ -43,8 +43,12 @@ int main(){
         G[b].push_back(a);
     }
 
+    // ある頂点から繋がっている頂点の情報を、昇順に並び替える
+    rep(i, N){
+        sort(G[i].begin(), G[i].end());
+    }
+
     seen.assign(N, false); //dfsする前に、すべての頂点について、未探索状態であることを表す。
-    path.push_back(1);
     dfs(G, 0); //dfsの再帰関数の開始
     rep(i, (int)path.size()){
         cout << path[i] << endl;

@@ -6,5 +6,5 @@ typedef long long ll;
 const int lim = 1000000007;
 
 int main(){
-
+    
 }

@@ -43,5 +43,9 @@
 			"path": "ARC_practice"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
 }

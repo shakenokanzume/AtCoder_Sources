@@ -6,6 +6,8 @@
 			"label": "C/C++: g++.exe アクティブなファイルのビルド",
 			"command": "C:\\MinGW\\bin\\g++.exe",
 			"args": [
+				"-I",
+				"~/ac-library",
 				"-g",
 				"${file}",
 				"-o",

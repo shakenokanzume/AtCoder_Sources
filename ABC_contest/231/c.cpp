@@ -3,44 +3,20 @@ using namespace std;
 
 typedef long long ll;
 #define rep(i, n) for(int i = 0; i < n; i++)
-#define repp(i, n) for(int i = 1; i < n; i++)
+
 const int lim = 1000000007;
 
 int main(){
-    int N, M;
-    cin >> N >> M;
-    vector<vector<bool>> takahashi(N, vector<bool>(N, false));
-    vector<vector<bool>> aoki(N, vector<bool>(N, false));
-    rep(i, M){
-        int a, b;
-        cin >> a >> b;
-        a--, b--;
-        takahashi[a][b] = takahashi[b][a] = true;
+    int n, q; cin >> n >> q;
+    vector<int> a(n);
+    rep(i, n) cin >> a[i];
+    sort(a.begin(), a.end());
+    vector<int> ans;
+    rep(j, q){
+        int x; cin >> x;
+        int val = a.end() - lower_bound(a.begin(), a.end(), x);
+        ans.push_back(val);
     }
-    rep(i, M){
-        int a, b;
-        cin >> a >> b;
-        a--, b--;
-        aoki[a][b] = aoki[b][a] = true;
-    }
-    vector<int> mirror(N);
-    rep(i, N) mirror[i] = i;
-
-    do{
-        bool is = true;
-        rep(i, N){
-            rep(j, N){
-                if(takahashi[i][j] != aoki[mirror[i]][mirror[j]]){
-                    is = false;
-                    break;
-                }
-            }
-        }
-        if(is){
-            cout << "Yes" << endl;
-            return 0;
-        }
-    }while(next_permutation(mirror.begin(), mirror.end()));
-    cout << "No" << endl;
+    rep(i, q) cout << ans[i] << endl;
     return 0;
 }

@@ -6,14 +6,17 @@ typedef long long ll;
 
 const int lim = 1000000007;
 
+void func(int n){
+    if(n > 1){
+        func(n-1);
+        cout << n << " ";
+        func(n-1);
+    }else{
+        cout << "1" << " ";
+    }
+}
 int main(){
     int n; cin >> n;
-    vector<int> ans(n);
-    rep(i, n){
-        int q; cin >> q;
-        q--;
-        ans[q] = i+1;
-    }
-    rep(i, n) cout << ans[i] << endl;
+    func(n);
     return 0;
 }

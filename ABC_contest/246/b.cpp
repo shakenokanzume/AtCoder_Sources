@@ -7,13 +7,11 @@ typedef long long ll;
 const int lim = 1000000007;
 
 int main(){
-    int n; cin >> n;
-    vector<int> ans(n);
-    rep(i, n){
-        int q; cin >> q;
-        q--;
-        ans[q] = i+1;
-    }
-    rep(i, n) cout << ans[i] << endl;
+    int a, b; cin >> a >> b;
+    double theta = atan2(b, a);
+    double x = cos(theta);
+    double y = sin(theta);
+    printf("%.7f\n", x);
+    printf("%.7f\n", y);
     return 0;
 }

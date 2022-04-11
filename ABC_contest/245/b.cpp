@@ -8,12 +8,15 @@ const int lim = 1000000007;
 
 int main(){
     int n; cin >> n;
-    vector<int> ans(n);
+    vector<bool> num(2001, false);
     rep(i, n){
-        int q; cin >> q;
-        q--;
-        ans[q] = i+1;
+        int a; cin >> a;
+        num[a] = true;
     }
-    rep(i, n) cout << ans[i] << endl;
-    return 0;
+    rep(i, 2001){
+        if(!num[i]){
+            cout << i << endl;
+            return 0;
+        }
+    }
 }

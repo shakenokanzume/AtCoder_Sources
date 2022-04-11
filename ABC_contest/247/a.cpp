@@ -7,13 +7,7 @@ typedef long long ll;
 const int lim = 1000000007;
 
 int main(){
-    int n; cin >> n;
-    vector<int> ans(n);
-    rep(i, n){
-        int q; cin >> q;
-        q--;
-        ans[q] = i+1;
-    }
-    rep(i, n) cout << ans[i] << endl;
+    string s; cin >> s;
+    cout << '0' << s.substr(0, 3) << endl;
     return 0;
 }

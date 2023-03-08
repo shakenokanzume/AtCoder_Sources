@@ -20,9 +20,7 @@ void dfs(const Graph & G, int v, int prev){
     n_p++;
     for(int nv : G[v]){
         // この位置では、次の頂点候補nvをすべて見るため、もれなく変数を計上できる
-        if(nv != prev){
-            n_v++;
-        }
+        n_v++;
         if(seen[nv] != -1) continue;
         dfs(G, nv, v);
     }
@@ -38,8 +36,12 @@ int main(){
         int a, b;
         cin >> a >> b;
         a--, b--;
-        G[a].push_back(b);
-        G[b].push_back(a);
+        if(a == b){
+            G[a].push_back(b);
+        }else{
+            G[a].push_back(b);
+            G[b].push_back(a);
+        }
     }
 
     seen.assign(N, -1); //dfsする前に、すべての要素を-1で初期化する
